@@ -1,0 +1,71 @@
+<html>
+<head>
+<style>
+
+h2 {
+  text-align: left;
+  margin-left:30px;
+  color:cyan;
+}
+input {
+  display: inline;
+  visibility: hidden;
+}
+label {
+	width:15%;
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  border: 1px solid black;
+  color: #666;
+   background-color: green;
+}
+label:hover {
+  color: #000;
+}
+label::before {
+  font-family: Consolas, monaco, monospace;
+  font-weight: bold;
+  font-size: 15px;
+  content: "+";
+  vertical-align: text-top;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+  
+}
+#expand {
+  height: 0px;
+  width:16.4%;
+  overflow: hidden;
+  transition: height .5s;
+  background-color: orange;
+}
+
+#newinvoice{
+	background-color:grey;
+	}
+#toggle:checked ~ #expand {
+  height: 120px;
+}
+#toggle:checked ~ label::before {
+  content: "-";
+}
+</style>
+</head>
+<body>
+  
+  <input id="toggle" type="checkbox" checked>
+  <label for="toggle">Invoices</label>
+  <div id="expand">
+    <section id="newinvoice">
+      <a href=""><h2>New Invoice</h2></a>
+    </section>
+	<section>
+      <h2>Invoices List</h2>
+    </section>
+  </div>
+ 
+</body>
+</html>

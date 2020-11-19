@@ -1,0 +1,29 @@
+<label>password :
+    <input name="password" id="password" type="password" onkeyup='check();' />
+</label>
+<br>
+<label>confirm password:
+    <input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
+    <span><input id='message' type="checkbox" value=""></span>
+</label>
+
+
+#message {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 20px auto;
+  background: #fcfff4;
+  }
+  
+  
+   var check = function() {
+      if (document.getElementById('password').value ==
+          document.getElementById('confirm_password').value) {
+          document.getElementById('message').style.background= 'green';
+          document.getElementById('message').checked = 'checked';
+      } else {
+      		document.getElementById('message').style.color = 'red';
+          document.getElementById('message').innerHTML = 'not matching';
+      }
+  }

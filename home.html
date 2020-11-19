@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffb3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 0.2px;
+    font-size: 30px;
+}
+
+#main {
+    transition: margin-left .50s;
+    padding: 0px;
+	margin-left:18%;
+	height:100%;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#about{
+	width:200px;
+	background-color:cyan;
+	}
+	
+.background{
+	margin-top:20px;
+	background-image: url(img/background.png);
+	height:540px;
+	width: 990px;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	}
+	
+
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <button type="button" style="width:100%;" href="javascript:void(0)" class="closebtn" autofocus onclick="closeNav()">Collapse</button>
+  <div id="about"><a href="#">About</a></div>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button autofocus><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></button>
+	<div class="background">
+	
+	</div>
+</div>
+
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+     
+</body>
+</html> 
